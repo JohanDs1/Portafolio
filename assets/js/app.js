@@ -7,7 +7,7 @@ const Form = document.querySelector(".formcontato__form")
 
 
 inputs.forEach(input => { 
-    input.addEventListener('blur', (event) => {
+    input.addEventListener('keyup', (event) => {
         const inputElement = event.target;
         valida(inputElement);
         comprobacion()
@@ -15,7 +15,7 @@ inputs.forEach(input => {
 });
     
 
-textArea.addEventListener('blur',validacionTextArea)
+textArea.addEventListener('keyup',validacionTextArea)
 
 function validacionTextArea  () {
     const contenido = textArea.value;
@@ -83,7 +83,7 @@ const submitInfo = (e)=>{
         inputs.forEach(input=> input.value = "")
         validacionTextArea();
         textArea.value = "";
-        alert("Se ha enviado al informacion(a la consola por el momento)")
+        alert("Se ha enviado al informacion (a la consola por el momento)")
     }else{
         
         alert("Por favor, complete todos los campos")
